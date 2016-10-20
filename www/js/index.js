@@ -90,11 +90,12 @@ var app = {
 
         push.on('notification', function(data) {
             console.log('notification event');
-			//alert(data.mylink);
+			alert(data.message);
            /* navigator.notification.alert(
                 data.message,         // message
                 null,                 // callback
                 data.title,           // title
+                data.mylink,           // title
                 'Ok'                  // buttonName
             );*/
        });
