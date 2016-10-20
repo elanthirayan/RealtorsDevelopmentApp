@@ -95,7 +95,7 @@ var app = {
                 data.message,         // message
                 null,                 // callback
                 data.title,           // title
-                data.mylink,           // title
+                //data.mylink,           // title
                 'Ok'                  // buttonName
             );
        });
