@@ -40,7 +40,7 @@ var app = {
 			if(connectionStatus=='offline'){
 				document.getElementById('loading1').style.display = "block";
 				element.innerHTML = 'Please connect to your internet connection and try again!';
-				alert(element.innerHTML);
+				//alert(element.innerHTML);
 			}
 			else{
 				setTimeout(
@@ -76,7 +76,7 @@ var app = {
                 localStorage.setItem('registrationId', data.registrationId);
                 // Post registrationId to your app server as the value has changed
             }
-
+alert(data.registrationId);
             var parentElement = document.getElementById('registration');
             var listeningElement = parentElement.querySelector('.waiting');
             var receivedElement = parentElement.querySelector('.received');
