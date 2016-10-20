@@ -76,7 +76,6 @@ var app = {
                 localStorage.setItem('registrationId', data.registrationId);
                 // Post registrationId to your app server as the value has changed
             }
-alert(data.registrationId);
             var parentElement = document.getElementById('registration');
             var listeningElement = parentElement.querySelector('.waiting');
             var receivedElement = parentElement.querySelector('.received');
@@ -91,6 +90,7 @@ alert(data.registrationId);
 
         push.on('notification', function(data) {
             console.log('notification event');
+			alert(data.mylink);
             navigator.notification.alert(
                 data.message,         // message
                 null,                 // callback
