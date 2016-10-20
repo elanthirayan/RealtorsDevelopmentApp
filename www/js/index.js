@@ -90,7 +90,7 @@ var app = {
 
         push.on('notification', function(data) {
             console.log('notification event');
-			alert(data.message);
+			//alert(data.message);
            /* navigator.notification.alert(
                 data.message,         // message
                 null,                 // callback
