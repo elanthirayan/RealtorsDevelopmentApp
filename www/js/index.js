@@ -94,7 +94,7 @@ var app = {
 			 if (data.additionalData.foreground) {
 				 window.open('https://google.com','_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
 			 }else{
-				window.open('http://xucorelms.com/nartesting/home/messages',_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
+				window.open('http://xucorelms.com/nartesting/home/messages','_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
 			 }
 			//window.open();
             /*navigator.notification.alert(
