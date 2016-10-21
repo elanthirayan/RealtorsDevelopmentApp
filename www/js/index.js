@@ -70,9 +70,14 @@ var app = {
             "windows": {}
         });
         console.log('after init');
-			PushNotification.hasPermission(function(granted)){
-				alert(granted);
+			PushNotification.hasPermission(function(data) {
+			if (data.isEnabled) {
+				console.log('isEnabled');
+				alert("Enabled");
+			}else{
+				alert("Not Enabled");
 			}
+		});
         push.on('registration', function(data) {
             console.log('registration event: ' + data.registrationId);
 
