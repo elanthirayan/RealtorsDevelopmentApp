@@ -70,14 +70,6 @@ var app = {
             "windows": {}
         });
         console.log('after init');
-			PushNotification.hasPermission(function(data) {
-			if (data.isEnabled) {
-				console.log('isEnabled');
-				alert("Enabled");
-			}else{
-				alert("Not Enabled");
-			}
-		});
         push.on('registration', function(data) {
             console.log('registration event: ' + data.registrationId);
 
@@ -99,6 +91,14 @@ var app = {
             console.log("push error = " + e.message);
         });
 
+			PushNotification.hasPermission(function(data) {
+			if (data.isEnabled) {
+				console.log('isEnabled');
+				alert("Enabled");
+			}else{
+				alert("Not Enabled");
+			}
+		});
         push.on('notification', function(data) {
             console.log('notification event');
 			//alert(data.additionalData.foreground);
