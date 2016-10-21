@@ -56,9 +56,7 @@ var app = {
     },
     setupPush: function() {
         console.log('calling push init');
-			PushNotification.hasPermission(function(granted)){
-				alert(granted);
-			}
+			
         var push = PushNotification.init({
             "android": {
                 "senderID": "401823884596", "forceShow": "true"
@@ -72,7 +70,9 @@ var app = {
             "windows": {}
         });
         console.log('after init');
-
+			PushNotification.hasPermission(function(granted)){
+				alert(granted);
+			}
         push.on('registration', function(data) {
             console.log('registration event: ' + data.registrationId);
 
