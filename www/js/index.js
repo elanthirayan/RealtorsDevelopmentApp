@@ -56,8 +56,8 @@ var app = {
     },
     setupPush: function() {
         console.log('calling push init');
-			PushNotification.hasPermission(function (granted)){
-				alert("gra"+granted);
+			PushNotification.hasPermission(function(granted)){
+				alert(granted);
 			}
         var push = PushNotification.init({
             "android": {
