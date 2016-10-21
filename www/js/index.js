@@ -90,6 +90,11 @@ var app = {
 
         push.on('notification', function(data) {
             console.log('notification event');
+			 if (data.additionalData.foreground) {
+				 window.open('https://google.com','_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
+			 }else{
+				window.open('https://gmail.com','_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
+			 }
 			//window.open();
             /*navigator.notification.alert(
                 data.message,         // message
