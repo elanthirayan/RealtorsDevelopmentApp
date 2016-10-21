@@ -90,14 +90,13 @@ var app = {
 
         push.on('notification', function(data) {
             console.log('notification event');
-			//alert(data.message);
 			//window.open();
-            navigator.notification.alert(
+            /*navigator.notification.alert(
                 data.message,         // message
                 null,                 // callback
-                data.title,           // title                
+                data.title,           // title                         
                 'Ok'                  // buttonName
-            );
+            ); */
        });
     }
 };

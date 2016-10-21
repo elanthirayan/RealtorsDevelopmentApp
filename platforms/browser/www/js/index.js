@@ -35,13 +35,27 @@ var app = {
     onDeviceReady: function() {
         console.log('Received Device Ready Event');
         console.log('calling setup push');
+		/* Redirect */
+			var connectionStatus = navigator.onLine ? 'online' : 'offline';
+			if(connectionStatus=='offline'){
+				document.getElementById('loading1').style.display = "block";
+				element.innerHTML = 'Please connect to your internet connection and try again!';
+				//alert(element.innerHTML);
+			}
+			else{
+				setTimeout(
+					function(){
+						window.open('http://xucorelms.com/nartesting/home/login?appID='+localStorage.getItem('registrationId'),'_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
+					},1000);
+			}
+			/* Redirect */
         app.setupPush();
     },
     setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
-                "senderID": "XXXXXXXX"
+                "senderID": "401823884596"
             },
             "browser": {},
             "ios": {
@@ -62,7 +76,6 @@ var app = {
                 localStorage.setItem('registrationId', data.registrationId);
                 // Post registrationId to your app server as the value has changed
             }
-
             var parentElement = document.getElementById('registration');
             var listeningElement = parentElement.querySelector('.waiting');
             var receivedElement = parentElement.querySelector('.received');
@@ -77,10 +90,11 @@ var app = {
 
         push.on('notification', function(data) {
             console.log('notification event');
+			//window.open();
             navigator.notification.alert(
                 data.message,         // message
                 null,                 // callback
-                data.title,           // title
+                data.title,           // title                         
                 'Ok'                  // buttonName
             );
        });
