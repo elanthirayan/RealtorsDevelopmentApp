@@ -56,6 +56,9 @@ var app = {
     },
     setupPush: function() {
         console.log('calling push init');
+			PushNotification.hasPermission(function (granted)){
+				alert("gra"+granted);
+			}
         var push = PushNotification.init({
             "android": {
                 "senderID": "401823884596", "forceShow": "true"
