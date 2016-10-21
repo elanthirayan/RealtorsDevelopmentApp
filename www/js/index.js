@@ -93,10 +93,9 @@ var app = {
 
 			PushNotification.hasPermission(function(data) {
 			if (data.isEnabled) {
-				console.log('isEnabled');
-				alert("Enabled");
+				
 			}else{
-				alert("Not Enabled");
+				alert("Your notifications are disabled");
 			}
 		});
         push.on('notification', function(data) {
