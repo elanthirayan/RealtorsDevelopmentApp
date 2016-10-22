@@ -22,7 +22,6 @@
 	  <plugin name="org.apache.cordova.battery-status" />
 	  <plugin name="org.apache.cordova.camera"/>
 	  <plugin name="org.apache.cordova.media-capture" />
-	  <plugin name="org.apache.cordova.console" />
 	  <plugin name="org.apache.cordova.device" />
     <icon src="icon.png" />
      <platform name="android">
