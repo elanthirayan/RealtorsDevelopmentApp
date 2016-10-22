@@ -19,6 +19,8 @@
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 	<plugin name="org.apache.cordova.inappbrowser" source="npm" />
+	<preference name="AndroidPersistentFileLocation" value="Internal" />
+	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <icon src="icon.png" />
      <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/android-icon-36x36.png" />
