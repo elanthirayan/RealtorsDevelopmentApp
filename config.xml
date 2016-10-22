@@ -19,10 +19,6 @@
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 	<plugin name="org.apache.cordova.inappbrowser" source="npm" />
-	  <plugin name="org.apache.cordova.battery-status" />
-	  <plugin name="org.apache.cordova.camera"/>
-	  <plugin name="org.apache.cordova.media-capture" />
-	  <plugin name="org.apache.cordova.device" />
     <icon src="icon.png" />
      <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/android-icon-36x36.png" />
