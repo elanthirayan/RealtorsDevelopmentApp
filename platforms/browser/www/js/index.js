@@ -33,6 +33,9 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+		document.addEventListener("backbutton", function (e) {
+			e.preventDefault();
+		}, false );
         console.log('Received Device Ready Event');
         console.log('calling setup push');
 		/* Redirect */
@@ -46,16 +49,17 @@ var app = {
 				setTimeout(
 					function(){
 						window.open('http://xucorelms.com/nartesting/home/login?appID='+localStorage.getItem('registrationId'),'_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
-					},1000);
+					},100);
 			}
 			/* Redirect */
         app.setupPush();
     },
     setupPush: function() {
         console.log('calling push init');
+			
         var push = PushNotification.init({
             "android": {
-                "senderID": "401823884596"
+                "senderID": "401823884596", "forceShow": "true"
             },
             "browser": {},
             "ios": {
@@ -66,7 +70,6 @@ var app = {
             "windows": {}
         });
         console.log('after init');
-
         push.on('registration', function(data) {
             console.log('registration event: ' + data.registrationId);
 
@@ -88,15 +91,28 @@ var app = {
             console.log("push error = " + e.message);
         });
 
+			PushNotification.hasPermission(function(data) {
+			if (data.isEnabled) {
+				
+			}else{
+				alert("Your notifications are disabled");
+			}
+		});
         push.on('notification', function(data) {
             console.log('notification event');
+			//alert(data.additionalData.foreground);
+			 if (data.additionalData.foreground) {
+				 window.open('http://xucorelms.com/nartesting/home/messages','_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
+			 }else{
+				window.open('http://xucorelms.com/nartesting/home/messages','_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
+			 }
 			//window.open();
-            navigator.notification.alert(
+            /*navigator.notification.alert(
                 data.message,         // message
                 null,                 // callback
                 data.title,           // title                         
                 'Ok'                  // buttonName
-            );
+            ); */
        });
     }
 };
