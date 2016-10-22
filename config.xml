@@ -19,6 +19,12 @@
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 	<plugin name="org.apache.cordova.inappbrowser" source="npm" />
+	  <plugin name="org.apache.cordova.battery-status" source="npm" />
+	  <plugin name="org.apache.cordova.camera" source="npm" />
+	  <plugin name="org.apache.cordova.media-capture" source="npm" />
+	  <plugin name="org.apache.cordova.console" source="npm" />
+	  <plugin name="org.apache.cordova.contacts" source="npm" />
+	  <plugin name="org.apache.cordova.device" source="npm" />
     <icon src="icon.png" />
      <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/android-icon-36x36.png" />
