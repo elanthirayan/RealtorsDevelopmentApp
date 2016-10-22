@@ -19,8 +19,23 @@
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 	<plugin name="org.apache.cordova.inappbrowser" source="npm" />
-	<preference name="AndroidPersistentFileLocation" value="Internal" />
-	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
+	
+	
+    <plugin name="cordova-plugin-battery-status" />
+    <plugin name="cordova-plugin-camera" />
+    <plugin name="cordova-plugin-media-capture" />
+    <plugin name="cordova-plugin-contacts" />
+    <plugin name="cordova-plugin-device" />
+    <plugin name="cordova-plugin-device-motion" />
+    <plugin name="cordova-plugin-device-orientation" />
+    <plugin name="cordova-plugin-file" />
+    <plugin name="cordova-plugin-file-transfer" />
+    <plugin name="cordova-plugin-geolocation" />
+    <plugin name="cordova-plugin-globalization" />
+    <plugin name="cordova-plugin-media" />
+    <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-splashscreen" />
+    <plugin name="cordova-plugin-vibration" />
     <icon src="icon.png" />
      <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/android-icon-36x36.png" />
